@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi Suhu</title>
+</head>
+<body>
+
+    <h3>Konversi Suhu</h3>
+
+    <label>Celcius</label>
+    <input type="number" id="celcius" placeholder="0" oninput="konversi()">
+    <br><br>
+
+    <label>Fahrenheit :</label>
+    <span id="hasil">0</span>
+
+    <script>
+        function konversi() {
+            let c = document.getElementById("celcius").value;
+
+            if (c === "") {
+                document.getElementById("hasil").innerText = "0";
+                return;
+            }
+
+            let f = (c * 9/5) + 32;
+            document.getElementById("hasil").innerText = f;
+        }
+    </script>
+
+</body>

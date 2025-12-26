@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan Sederhana</title>
+</head>
+<body>
+
+    <h3>penjumlahan sederhana</h3>
+
+    <input type="number" id="angka1" placeholder=""><br><br>
+    <input type="number" id="angka2" placeholder=""><br><br>
+
+    <button onclick="hitung()">+</button><br><br>
+
+    <p id="hasil"></p>
+
+    <script>
+        function hitung() {
+            let a = parseInt(document.getElementById("angka1").value) || 0;
+            let b = parseInt(document.getElementById("angka2").value) || 0;
+
+            document.getElementById("hasil").textContent = a + b;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Cek Kelulusan</title>
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 140px; /* mengatur jarak label */
+        }
+    </style>
+</head>
+<body>
+
+<h3>Cek Kelulusan</h3>
+
+<div class="form-group">
+    <label>Batas Kelulusan</label>
+    <input type="number" id="batas">
+</div>
+
+<div class="form-group">
+    <label>Nilai Ujian</label>
+    <input type="number" id="nilai">
+</div>
+
+<button onclick="cekKelulusan()">Cek</button>
+
+<p id="hasil"></p>
+
+<script>
+function cekKelulusan() {
+    let batas = document.getElementById("batas").value;
+    let nilai = document.getElementById("nilai").value;
+
+    if (nilai >= batas) {
+        document.getElementById("hasil").innerHTML = "Lulus";
+    } else {
+        document.getElementById("hasil").innerHTML = "Tidak Lulus";
+    }
+}
+</script>
+
+</body>
+</html>

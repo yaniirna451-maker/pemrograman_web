@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Toggle</title>
+    <style>
+        #menuList {
+            display: none;   /* awalnya disembunyikan */
+            margin-top: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="toggleMenu()">Menu</button>
+
+<div id="menuList">
+    <ul>
+        <li>Menu 1</li>
+        <li>Menu 2</li>
+        <li>Menu 3</li>
+    </ul>
+</div>
+
+<script>
+function toggleMenu() {
+    let menu = document.getElementById("menuList");
+
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
